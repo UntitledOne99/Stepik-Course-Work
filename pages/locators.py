@@ -19,3 +19,7 @@ class ProductPageLocators():
     NAME_OF_THE_BOOK = (By.XPATH, '//*[@id="content_inner"]/article/div[1]/div[2]/h1')
     PRICE_OF_THE_BOOK = (By.CSS_SELECTOR, '[class="price_color"]')
     BASKET_TOTAL = (By.XPATH, '//*[@id="messages"]/div[3]/div/p[1]/strong')
+    SUCCESS_MESSAGE = (By.CSS_SELECTOR,'[class="alert alert-safe alert-noicon alert-success  fade in"]')
+
+class BasketPageLocators():
+    BASKET_ITEMS = (By.ID, 'content_inner')
