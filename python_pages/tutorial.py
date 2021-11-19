@@ -1,7 +1,6 @@
-from pages.base_page import BasePage
-from selenium.webdriver.common.by import By
+from selenium import webdriver
 
-
-class Tutorial(BasePage):
-    def sending_an_answer(self):
-        testing_field = self.browser.find_element(By.XPATH,'//*[@id="ember68239"]/div/div[6]/div[1]/div/div/div/div[5]/div[2]/pre')
+driver = webdriver.Chrome()
+driver.get('https://www.google.com')
+driver.save_screenshot('screen.png')
+driver.quit()

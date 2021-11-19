@@ -36,13 +36,5 @@ class BasePage():
 
         return False
 
-    def basket_function(self):
-        try:
-           basketbtn = self.browser.find_element(By.XPATH,'//*[@id="default"]/header/div[1]/div/div[2]/span/a')
-           basketbtn.click()
-        except (NoSuchElementException):
-            return False
-        return True
-
     def open(self):
         self.browser.get(self.url)

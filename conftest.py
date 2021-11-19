@@ -29,6 +29,7 @@ def browser(request):
         joined_browsers = ', '.join(supported_browsers.keys())
         raise pytest.UsageError(f"--browser_name is invalid, supported browsers: {joined_browsers}")
 
+
     yield browser
     print("\nquit browser..")
-    browser.quit()
+    browser.close()

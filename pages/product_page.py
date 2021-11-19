@@ -11,6 +11,7 @@ import time
 class ProductPage(BasePage):
     def product_function(self):
         self.additing_into_cart()
+        self.price_of_the_book()
         #time.sleep(60)
 
     def should_be_right_url(self):
@@ -19,6 +20,7 @@ class ProductPage(BasePage):
     def additing_into_cart(self):
         addIt = self.browser.find_element(*ProductPageLocators.ADD_TO_BASKET)
         addIt.click()
+        self.browser.save_screenshot('C/screen.png')
 
     def name_of_the_book(self):
         bookName = (self.browser.find_element(*ProductPageLocators.NAME_OF_THE_BOOK)).text
@@ -49,3 +51,4 @@ class ProductPage(BasePage):
             alert.accept()
         except NoAlertPresentException:
             print("No second alert presented")
+            self.browser.save_screenshot()
